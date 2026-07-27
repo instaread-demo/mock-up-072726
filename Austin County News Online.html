@@ -1,0 +1,927 @@
+<!DOCTYPE html><html lang="en-US" class="js" style="height: 100%;"><head><base href="https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/">
+	<meta charset="UTF-8">
+			
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://austincountynewsonline.com/xmlrpc.php">
+
+		<!--[if lt IE 9]>
+	<script src="https://austincountynewsonline.com/wp-content/themes/Extra/scripts/ext/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><style id="et-builder-googlefonts-cached-inline">/* Original: https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;subset=latin,latin-ext&#038;display=swap *//* User Agent: Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0) */@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=pxiEyp8kv8JHgFVrJJnedg&skey=87759fb096548f6d&v=v24);}/* User Agent: Mozilla/4.0 (iPad; CPU OS 4_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/4.1 Mobile/9A405 Safari/7534.48.3 */@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/l/font?kit=pxiEyp8kv8JHgFVrJJnedQ&skey=87759fb096548f6d&v=v24#Poppins) format('svg');}/* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiAyp8kv8JHgFVrJJLmE0tMMPc.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmv1pVGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm21lVGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLufntF.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmg1hVGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmr19VGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmy15VGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm111VGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm81xVGdeL.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrLPTufntF.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLFj_Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJnedw.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDD4Z1JlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5Z1JlEA.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiAyp8kv8JHgFVrJJLmE0tMMPQ.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmv1pVGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm21lVGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLufntG.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmg1hVGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmr19VGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmy15VGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm111VGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm81xVGdeI.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrLPTufntG.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLFj_Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJnedA.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDD4Z1JlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5Z1JlEw.woff) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiAyp8kv8JHgFVrJJLmE0tMMPI.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmv1pVGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm21lVGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLufntA.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmg1hVGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmr19VGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmy15VGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm111VGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm81xVGdeO.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrLPTufntA.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLFj_Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJnecg.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDD4Z1JlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5Z1JlFQ.woff2) format('woff2');}</style><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v28.1 (Yoast SEO v28.1) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Texas A&amp;M Develops AI Tool for Autism, Dementia Care - Austin County News Online</title>
+	<meta name="description" content="Texas A&amp;M researchers are developing an AI platform to improve communication and personalized care for people with autism and dementia.">
+	<link rel="canonical" href="https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Texas A&amp;M Develops AI Tool for Autism, Dementia Care">
+	<meta property="og:description" content="A new AI-powered platform under development at Texas A&amp;M could transform how caregivers support children with autism and older adults living with dementia. By learning each person's unique communication style and behaviors, the technology aims to improve understanding, reduce frustration and provide more personalized care.">
+	<meta property="og:url" content="https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/">
+	<meta property="og:site_name" content="Austin County News Online">
+	<meta property="article:publisher" content="https://www.facebook.com/austincountynewsonline/">
+	<meta property="article:published_time" content="2026-07-23T01:12:36+00:00">
+	<meta property="og:image" content="https://austincountynewsonline.com/wp-content/uploads/2026/07/Tamu-dementia.png">
+	<meta property="og:image:width" content="1080">
+	<meta property="og:image:height" content="680">
+	<meta property="og:image:type" content="image/png">
+	<meta name="author" content="Shelley Brian">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description" content="A new AI-powered platform under development at Texas A&amp;M could transform how caregivers support children with autism and older adults living with dementia. By learning each person's unique communication style and behaviors, the technology aims to improve understanding, reduce frustration and provide more personalized care.">
+	<meta name="twitter:creator" content="@ACNewsOnline">
+	<meta name="twitter:site" content="@ACNewsOnline">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Shelley Brian">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="3 minutes">
+	
+	<meta name="geo.placename" content="Sealy">
+	<meta name="geo.position" content="29.858957894051525;-96.17700515489928">
+	<meta name="geo.region" content="United States (US)">
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Austin County News Online » Feed" href="https://austincountynewsonline.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Austin County News Online » Comments Feed" href="https://austincountynewsonline.com/comments/feed/">
+<link rel="alternate" type="text/calendar" title="Austin County News Online » iCal Feed" href="https://austincountynewsonline.com/events/?ical=1">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://austincountynewsonline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faustincountynewsonline.com%2Ftexas-am-develops-ai-tool-for-autism-dementia-care%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://austincountynewsonline.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Faustincountynewsonline.com%2Ftexas-am-develops-ai-tool-for-autism-dementia-care%2F&amp;format=xml">
+<meta content="ACNO v.1.0" name="generator"><!-- austincountynewsonline.com is managing ads with Advanced Ads 2.0.25 – https://wpadvancedads.com/ -->
+		<link rel="stylesheet" id="tribe-events-pro-mini-calendar-block-styles-css" href="https://austincountynewsonline.com/wp-content/plugins/events-calendar-pro/build/css/tribe-events-pro-mini-calendar-block.css?ver=7.8.0" media="all">
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 856px;--wp--style--global--wide-size: 1280px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel="stylesheet" id="google-language-translator-css" href="https://austincountynewsonline.com/wp-content/plugins/google-language-translator/css/style.css?ver=6.0.20" media="">
+<link rel="stylesheet" id="glt-toolbar-styles-css" href="https://austincountynewsonline.com/wp-content/plugins/google-language-translator/css/toolbar.css?ver=6.0.20" media="">
+<link rel="stylesheet" id="rt-fontawsome-css" href="https://austincountynewsonline.com/wp-content/plugins/the-post-grid/assets/vendor/font-awesome/css/font-awesome.min.css?ver=7.9.3" media="all">
+<link rel="stylesheet" id="rt-tpg-shortcode-css" href="https://austincountynewsonline.com/wp-content/plugins/the-post-grid/assets/css/tpg-shortcode.min.css?ver=7.9.3" media="all">
+<link rel="stylesheet" id="dnext_module_css-css" href="https://austincountynewsonline.com/wp-content/plugins/divi-essential/includes/../styles/admin-module.css?ver=1785125631" media="all">
+<link rel="stylesheet" id="dnext_wow_css-css" href="https://austincountynewsonline.com/wp-content/plugins/divi-essential/includes/../styles/animate.min.css?ver=1785125631" media="all">
+<link rel="stylesheet" id="dnext_magnify_css-css" href="https://austincountynewsonline.com/wp-content/plugins/divi-essential/includes/../styles/magnify.min.css?ver=1785149733" media="all">
+<link rel="stylesheet" id="dnext_style_css-css" href="https://austincountynewsonline.com/wp-content/plugins/divi-essential/includes/../styles/style.css?ver=1785097673" media="all">
+<link rel="stylesheet" id="extra-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,latin-ext" media="all">
+<link rel="stylesheet" id="divi-essential-styles-css" href="https://austincountynewsonline.com/wp-content/plugins/divi-essential/styles/style.min.css?ver=4.2.0" media="all">
+<link rel="stylesheet" id="wpjb-glyphs-css" href="https://austincountynewsonline.com/wp-content/plugins/wpjobboard/public/css/wpjb-glyphs.css?ver=5.9.3" media="all">
+<link rel="stylesheet" id="wpjb-css-css" href="https://austincountynewsonline.com/wp-content/plugins/wpjobboard/public/css/frontend.css?ver=5.9.3" media="all">
+<link rel="stylesheet" id="extra-style-parent-css" href="https://austincountynewsonline.com/wp-content/themes/Extra/style-static.min.css?ver=4.27.7" media="all">
+<link rel="stylesheet" id="extra-style-css" href="https://austincountynewsonline.com/wp-content/themes/extra-child/style.css?ver=4.27.7" media="all">
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+
+
+<link rel="https://api.w.org/" href="https://austincountynewsonline.com/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://austincountynewsonline.com/wp-json/wp/v2/posts/118437"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://austincountynewsonline.com/xmlrpc.php?rsd">
+
+<link rel="shortlink" href="https://austincountynewsonline.com/?p=118437">
+<link rel="dns-prefetch" href="https://i0.wp.com/"><link rel="preconnect" href="https://i0.wp.com/" crossorigin=""><link rel="dns-prefetch" href="https://i1.wp.com/"><link rel="preconnect" href="https://i1.wp.com/" crossorigin=""><link rel="dns-prefetch" href="https://i2.wp.com/"><link rel="preconnect" href="https://i2.wp.com/" crossorigin=""><link rel="dns-prefetch" href="https://i3.wp.com/"><link rel="preconnect" href="https://i3.wp.com/" crossorigin=""><style>[class$="woocommerce-product-gallery__trigger"] {display:none !important;}</style><style>#google_language_translator{width:auto!important;}div.skiptranslate.goog-te-gadget{display:inline!important;}.goog-tooltip{display: none!important;}.goog-tooltip:hover{display: none!important;}.goog-text-highlight{background-color:transparent!important;border:none!important;box-shadow:none!important;}#google_language_translator select.goog-te-combo{color:#32373c;}div.skiptranslate{display:none!important;}body{top:0px!important;}#goog-gt-{display:none!important;}font font{background-color:transparent!important;box-shadow:none!important;position:initial!important;}#glt-translate-trigger{left:20px;right:auto;}#glt-translate-trigger > span{color:#ffffff;}#glt-translate-trigger{background:#f89406;}.goog-te-gadget .goog-te-combo{width:100%;}</style><meta name="generator" content="Site Kit by Google 1.183.0">        <style>
+            :root {
+                --tpg-primary-color: #0d6efd;
+                --tpg-secondary-color: #0654c4;
+                --tpg-primary-light: #c4d0ff
+            }
+
+                        body .rt-tpg-container .rt-loading,
+            body #bottom-script-loader .rt-ball-clip-rotate {
+                color: #0367bf !important;
+            }
+
+                    </style>
+		<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://austincountynewsonline.com"><link rel="alternate" href="https://austincountynewsonline.com/wp-json/tribe/events/v1/"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1"><meta name="google-site-verification" content="SBGgDTxfkVz-C4rPuVNmNgWpOvGPCEcEmInP6X35pk8">
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+		
+				
+		<link rel="icon" href="https://austincountynewsonline.com/wp-content/uploads/2016/07/cropped-Austin-County-Buy-and-Sell-Logo-for-Android-32x32.jpg" sizes="32x32">
+<link rel="icon" href="https://austincountynewsonline.com/wp-content/uploads/2016/07/cropped-Austin-County-Buy-and-Sell-Logo-for-Android-192x192.jpg" sizes="192x192">
+<link rel="apple-touch-icon" href="https://austincountynewsonline.com/wp-content/uploads/2016/07/cropped-Austin-County-Buy-and-Sell-Logo-for-Android-180x180.jpg">
+<meta name="msapplication-TileImage" content="https://austincountynewsonline.com/wp-content/uploads/2016/07/cropped-Austin-County-Buy-and-Sell-Logo-for-Android-270x270.jpg">
+
+<!-- FIFU:jsonld:begin -->
+
+<!-- FIFU:jsonld:end -->
+<style id="et-extra-customizer-global-cached-inline-styles">a,a:visited,.post-content a,.et_pb_pagebuilder_layout .et_pb_blurb_container p a,.et_pb_pagebuilder_layout .et_pb_code a,.et_pb_pagebuilder_layout .et_pb_promo_description a,.et_pb_pagebuilder_layout .et_pb_newsletter_description a,.et_pb_pagebuilder_layout .et_pb_team_member_description>a,.et_pb_pagebuilder_layout .et_pb_pricing li a,.et_pb_pagebuilder_layout .et_pb_slide_content a,.et_pb_pagebuilder_layout .et_pb_tab a,.et_pb_pagebuilder_layout .et_pb_text a,.et_pb_pagebuilder_layout .et_pb_toggle_content a,.et_pb_pagebuilder_layout .et_pb_fullwidth_code a{color:#0000ee}body{color:#000000}h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:#000000}.archive h1,.search h1{color:#000000}@media only screen and (min-width:768px){#main-header .logo{height:59.67px;margin:28.665px 0}.header.left-right #et-navigation>ul>li>a{padding-bottom:50.5px}}@media only screen and (min-width:768px){.et-fixed-header #main-header .logo{height:59.67px;margin:28.665px 0}.et-fixed-header .header.left-right #et-navigation>ul>li>a{padding-bottom:50.5px}}@media only screen and (max-width:767px){.brbl-smart-post-topbar{display:block;text-align:center}.brbl-smart-post-filter{justify-content:center;position:relative}}#et-trending-button{display:none!important}@media (min-width:600px){.brbl-smart-post .brbl-smart-post-filter .brbl-smart-post-filter-menu .flexMenu-popup{width:200px}}.brbl-smart-post .brbl-smart-post-filter .brbl-smart-post-filter-menu .flexMenu-viewMore>a{border:1px solid black;padding:5px 40px 5px 25px;position:relative}.brbl-smart-post .brbl-smart-post-filter .brbl-smart-post-filter-menu .flexMenu-viewMore>a::after{content:'\25bc';color:#333;position:absolute;right:10px;font-size:14px;top:50%;transform:translateY(-50%)}.brbl-smart-post .brbl-smart-post-filter .brbl-smart-post-filter-menu .flexMenu-popup .brbl-filter-nav-el{padding:0}@media (max-width:599px){.brbl-smart-post .brbl-smart-post-wrapper .brbl-smart-post-item .brbl-smart-post-item-inner{display:block}.brbl-smart-post .brbl-smart-post-wrapper .brbl-smart-post-item .brbl-smart-post-item-inner .brbl-smart-post-thumb{height:200px;margin-right:0}.brbl-smart-post .brbl-smart-post-wrapper .brbl-smart-post-item .brbl-smart-post-item-inner .brbl-smart-post-thumb img{height:200px}.brbl-smart-post .brbl-smart-post-filter .brbl-smart-post-filter-menu .flexMenu-popup{width:80%;left:50%;transform:translateX(-50%)}.brbl-smart-post .brbl-smart-post-filter .brbl-smart-post-filter-menu>ul{position:unset}}</style><link rel="stylesheet" id="fifu-lazyload-style-css" href="https://austincountynewsonline.com/wp-content/plugins/featured-image-from-url/includes/html/css/lazyload.css?ver=5.3.3" media="all">
+
+<link rel="preload" as="image" href="https://i1.wp.com/austincountynewsonline.com/wp-content/uploads/2026/07/Tamu-dementia.png?w=1280&amp;resize=1280,640&amp;ssl=1"><link type="text/css" rel="stylesheet" charset="UTF-8" href="https://www.gstatic.com/_/translate_http/_/ss/k=translate_http.tr.zZZZhVqDDCw.L.W.O/am=BIAABw/d=0/rs=AN8SPfpWxivXbFD2WhpIdS-DPbQSwnZZjQ/m=el_main_css"><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+
+<body class="wp-singular post-template-default single single-post postid-118437 single-format-standard wp-theme-Extra wp-child-theme-extra-child et-tb-has-template et-tb-has-footer rttpg rttpg-7.9.3 radius-frontend rttpg-body-wrap tribe-js et_extra et_fixed_nav et_pb_gutters3 et_primary_nav_dropdown_animation_Default et_secondary_nav_dropdown_animation_Default with_sidebar with_sidebar_right et_includes_sidebar et-db chrome" style="position: relative; min-height: 100%; top: 0px;">
+	<div id="page-container" class="page-container">
+<div id="et-boc" class="et-boc">
+			
+		<!-- Header -->
+<header class="header left-right">
+			<!-- #top-header -->
+		<div id="top-header" style="">
+			<div class="container">
+
+				<!-- Secondary Nav -->
+									<div id="et-secondary-nav" class="et-trending">
+						
+							<!-- ET Trending -->
+							<div id="et-trending">
+
+								<!-- ET Trending Button -->
+								<a id="et-trending-button" href="#" title="">
+									<span></span>
+									<span></span>
+									<span></span>
+								</a>
+
+								<!-- ET Trending Label -->
+								<h4 id="et-trending-label">
+									TRENDING:								</h4>
+
+								<!-- ET Trending Post Loop -->
+								<div id="et-trending-container">
+																														<div id="et-trending-post-118416" class="et-trending-post et-trending-latest">
+												<a href="https://austincountynewsonline.com/hurricane-preparation-isnt-just-for-the-coast/">Hurricane Preparation Isn’t Just for the Coast</a>
+											</div>
+																						<div id="et-trending-post-118027" class="et-trending-post" style="display: none;">
+												<a href="https://austincountynewsonline.com/sealy-police-ac-failure/">Sealy Police Department Building Declared Emergency Due...</a>
+											</div>
+																						<div id="et-trending-post-118144" class="et-trending-post" style="display: none;">
+												<a href="https://austincountynewsonline.com/celebrate-americas-250th-birthday-safely-this-fourth-of-july/">Celebrate America’s 250th Birthday Safely This Fo...</a>
+											</div>
+																												</div>
+							</div>
+							
+												</div>
+				
+				<!-- #et-info -->
+				<div id="et-info">
+
+					
+						<!-- .et-extra-social-icons -->
+						<ul class="et-extra-social-icons" style="">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															</ul>
+					
+					<!-- .et-top-search -->
+											<div class="et-top-search" style="">
+							<form role="search" class="et-search-form" method="get" action="https://austincountynewsonline.com/">
+			<input type="search" class="et-search-field" placeholder="Search" value="" name="s" title="Search for:">
+			<button class="et-search-submit"></button>
+		</form>						</div>
+					
+					<!-- cart -->
+									</div>
+			</div><!-- /.container -->
+		</div><!-- /#top-header -->
+
+	
+	<!-- Main Header -->
+	<div id="main-header-wrapper" style="height: 116.969px;">
+		<div id="main-header" data-fixed-height="117">
+			<div class="container">
+				<!-- ET Ad -->
+				
+				
+					<!-- Logo -->
+					<a class="logo" href="https://austincountynewsonline.com/" data-fixed-height="51" style="width: 217px;" data-fixed-width="217.4092806782866" data-initial-width="217.359" data-initial-height="59.6562">
+						<img src="https://austincountynewsonline.com/wp-content/uploads/2022/06/acno-logo-with-text.png" alt="Austin County News Online" id="logo">
+					</a>
+
+				
+				<!-- ET Navigation -->
+				<div id="et-navigation">
+					<ul id="et-menu" class="nav"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="/">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu menu-item-has-children mega-menu-cols menu-item-105350"><a>Local News</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81066"><a href="https://austincountynewsonline.com/austincounty/">Austin County</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104764"><a href="https://austincountynewsonline.com/austincountynews/">Austin County News</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81316"><a href="https://austincountynewsonline.com/blinn-college/">Blinn College</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104769"><a href="https://austincountynewsonline.com/jailreport/">Jail Report</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104770"><a href="https://austincountynewsonline.com/commissionerscourt/">Commissioners Court</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104775"><a href="https://austincountynewsonline.com/appraisaldistrict/">Appraisal District</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-104735"><a href="https://austincountynewsonline.com/sealy/">Sealy</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104791"><a href="https://austincountynewsonline.com/sealynews/">Sealy News</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104904"><a href="https://austincountynewsonline.com/sealy-isd/">Sealy ISD</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104792"><a href="https://austincountynewsonline.com/sealy-city-council/">Sealy City Council</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104794"><a href="https://austincountynewsonline.com/sealy-planning-commission/">Sealy Planning Commission</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104793"><a href="https://austincountynewsonline.com/sealy-edc-meetings/">Sealy EDC Meetings</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104808"><a href="https://austincountynewsonline.com/sealy-capital-improvements-advisory-committee/">Capital Improvements Committee</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81498"><a href="https://austincountynewsonline.com/bellville/">Bellville</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104843"><a href="https://austincountynewsonline.com/bellvillenews/">Bellville News</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104905"><a href="https://austincountynewsonline.com/bellvilleisd/">Bellville ISD</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104914"><a href="https://austincountynewsonline.com/faithacademy/">Faith Academy</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104855"><a href="https://austincountynewsonline.com/bellvillecitycouncil/">Bellville City Council</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104863"><a href="https://austincountynewsonline.com/bellvilleedc/">Bellville EDC</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81686"><a href="https://austincountynewsonline.com/wallis-industry-new-ulm-san-felipe/">Wallis, Industry, New Ulm, San Felipe</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104869"><a href="https://austincountynewsonline.com/wallis-industry-new-ulm-san-felipe-news/">Wallis, Industry, New Ulm, San Felipe News</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104906"><a href="https://austincountynewsonline.com/brazosisd/">Brazos ISD</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104897"><a href="https://austincountynewsonline.com/walliscitycouncil/">Wallis City Council</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104898"><a href="https://austincountynewsonline.com/wallisedc/">Wallis EDC</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104903"><a href="https://austincountynewsonline.com/sanfelipecitycouncil/">San Felipe City Council</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu menu-item-has-children mega-menu-cols menu-item-77271"><a>Other News</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-77300"><a href="/">News</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-76"><a href="https://austincountynewsonline.com/category/state/">State News</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-109"><a href="https://austincountynewsonline.com/category/national/">National News</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3474"><a href="https://austincountynewsonline.com/category/international/">International News</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1555"><a href="https://austincountynewsonline.com/category/agriculture-news/">Agriculture News &amp; Info.</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-75"><a href="https://austincountynewsonline.com/category/sports/">Sports</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2128"><a href="https://austincountynewsonline.com/category/business-news/">Business &amp; Economy</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3475"><a href="https://austincountynewsonline.com/category/science-and-technology/">Science &amp; Tech</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-3476"><a href="https://austincountynewsonline.com/category/health-and-medical/">Health &amp; Medical</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2129"><a href="https://austincountynewsonline.com/category/politics/">Politics</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-71"><a href="https://austincountynewsonline.com/category/lifestyles/">Lifestyles</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77238"><a href="https://austincountynewsonline.com/weather/">Weather</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49353"><a href="https://austincountynewsonline.com/traffic/">Traffic</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79628"><a href="https://austincountynewsonline.com/community-calendar/">Events</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77468"><a href="https://austincountynewsonline.com/jobsboard/">Jobs</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77261"><a href="https://austincountynewsonline.com/live/">LIVE</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85298"><a href="https://austincountynewsonline.com/advertise/">Advertise</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu menu-item-has-children mega-menu-cols menu-item-105351"><a href="https://austincountynewsonline.com/hello/">Shows</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114101"><a href="https://austincountynewsonline.com/hello/podcast/">Hello Austin County Podcast</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114102"><a href="https://austincountynewsonline.com/hello/studio-cookin/">Studio Cookin’</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114103"><a href="https://austincountynewsonline.com/hello/studio-craftin/">Studio Craftin’</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114104"><a href="https://austincountynewsonline.com/hello/the-living-room/">The Living Room</a></li>
+</ul>
+</li>
+</ul>					<div id="et-mobile-navigation">
+			<span class="show-menu">
+				<div class="show-menu-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<p>Select Page</p>
+			</span>
+			<nav>
+			<div id="et-info">
+
+					
+						<!-- .et-extra-social-icons -->
+						<ul class="et-extra-social-icons" style="">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															</ul>
+					
+					<!-- .et-top-search -->
+											<div class="et-top-search" style="">
+							<form role="search" class="et-search-form" method="get" action="https://austincountynewsonline.com/">
+			<input type="search" class="et-search-field" placeholder="Search" value="" name="s" title="Search for:">
+			<button class="et-search-submit"></button>
+		</form>						</div>
+					
+					<!-- cart -->
+									</div><ul id="et-extra-mobile-menu" class="et_extra_mobile_menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15 et_first_mobile_item"><a href="/">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu menu-item-has-children mega-menu-cols menu-item-105350"><a>Local News</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81066"><a href="https://austincountynewsonline.com/austincounty/">Austin County</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104764"><a href="https://austincountynewsonline.com/austincountynews/">Austin County News</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-81316"><a href="https://austincountynewsonline.com/blinn-college/">Blinn College</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104769"><a href="https://austincountynewsonline.com/jailreport/">Jail Report</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104770"><a href="https://austincountynewsonline.com/commissionerscourt/">Commissioners Court</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104775"><a href="https://austincountynewsonline.com/appraisaldistrict/">Appraisal District</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-104735"><a href="https://austincountynewsonline.com/sealy/">Sealy</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104791"><a href="https://austincountynewsonline.com/sealynews/">Sealy News</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104904"><a href="https://austincountynewsonline.com/sealy-isd/">Sealy ISD</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104792"><a href="https://austincountynewsonline.com/sealy-city-council/">Sealy City Council</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104794"><a href="https://austincountynewsonline.com/sealy-planning-commission/">Sealy Planning Commission</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104793"><a href="https://austincountynewsonline.com/sealy-edc-meetings/">Sealy EDC Meetings</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104808"><a href="https://austincountynewsonline.com/sealy-capital-improvements-advisory-committee/">Capital Improvements Committee</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81498"><a href="https://austincountynewsonline.com/bellville/">Bellville</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104843"><a href="https://austincountynewsonline.com/bellvillenews/">Bellville News</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104905"><a href="https://austincountynewsonline.com/bellvilleisd/">Bellville ISD</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104914"><a href="https://austincountynewsonline.com/faithacademy/">Faith Academy</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104855"><a href="https://austincountynewsonline.com/bellvillecitycouncil/">Bellville City Council</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104863"><a href="https://austincountynewsonline.com/bellvilleedc/">Bellville EDC</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-81686"><a href="https://austincountynewsonline.com/wallis-industry-new-ulm-san-felipe/">Wallis, Industry, New Ulm, San Felipe</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104869"><a href="https://austincountynewsonline.com/wallis-industry-new-ulm-san-felipe-news/">Wallis, Industry, New Ulm, San Felipe News</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104906"><a href="https://austincountynewsonline.com/brazosisd/">Brazos ISD</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104897"><a href="https://austincountynewsonline.com/walliscitycouncil/">Wallis City Council</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104898"><a href="https://austincountynewsonline.com/wallisedc/">Wallis EDC</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104903"><a href="https://austincountynewsonline.com/sanfelipecitycouncil/">San Felipe City Council</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu menu-item-has-children mega-menu-cols menu-item-77271"><a>Other News</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-77300"><a href="/">News</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-76"><a href="https://austincountynewsonline.com/category/state/">State News</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-109"><a href="https://austincountynewsonline.com/category/national/">National News</a></li>
+		<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3474"><a href="https://austincountynewsonline.com/category/international/">International News</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1555"><a href="https://austincountynewsonline.com/category/agriculture-news/">Agriculture News &amp; Info.</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-75"><a href="https://austincountynewsonline.com/category/sports/">Sports</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2128"><a href="https://austincountynewsonline.com/category/business-news/">Business &amp; Economy</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3475"><a href="https://austincountynewsonline.com/category/science-and-technology/">Science &amp; Tech</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-3476"><a href="https://austincountynewsonline.com/category/health-and-medical/">Health &amp; Medical</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2129"><a href="https://austincountynewsonline.com/category/politics/">Politics</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-71"><a href="https://austincountynewsonline.com/category/lifestyles/">Lifestyles</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77238"><a href="https://austincountynewsonline.com/weather/">Weather</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49353"><a href="https://austincountynewsonline.com/traffic/">Traffic</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-79628"><a href="https://austincountynewsonline.com/community-calendar/">Events</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77468"><a href="https://austincountynewsonline.com/jobsboard/">Jobs</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77261"><a href="https://austincountynewsonline.com/live/">LIVE</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-85298"><a href="https://austincountynewsonline.com/advertise/">Advertise</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children mega-menu menu-item-has-children mega-menu-cols menu-item-105351"><a href="https://austincountynewsonline.com/hello/">Shows</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114101"><a href="https://austincountynewsonline.com/hello/podcast/">Hello Austin County Podcast</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114102"><a href="https://austincountynewsonline.com/hello/studio-cookin/">Studio Cookin’</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114103"><a href="https://austincountynewsonline.com/hello/studio-craftin/">Studio Craftin’</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-114104"><a href="https://austincountynewsonline.com/hello/the-living-room/">The Living Room</a></li>
+</ul>
+</li>
+</ul></nav>
+		</div> <!-- /#et-mobile-navigation -->				</div><!-- /#et-navigation -->
+			</div><!-- /.container -->
+		</div><!-- /#main-header -->
+	</div><!-- /#main-header-wrapper -->
+</header>
+
+<div id="main-content">
+		<div class="container">
+		<div id="content-area" class="clearfix">
+			<div class="et_pb_extra_column_main">
+																<article id="post-118437" class="module single-post-module post-118437 post type-post status-publish format-standard has-post-thumbnail hentry category-health-and-medical tag-ai tag-arpa-h tag-artificial-intelligence tag-autism tag-behavioral-health tag-caregivers tag-dementia tag-healthcare tag-medical-research tag-school-of-public-health tag-technology tag-texas-am tag-voicelove et-has-post-format-content et_post_format-et-post-format-standard">
+														<div class="post-header">
+								<h1 class="entry-title">Texas A&amp;M Develops AI Tool for Autism, Dementia Care</h1>
+								<div class="post-meta vcard">
+									<p><span class="updated">Jul 22, 2026</span> | <a href="https://austincountynewsonline.com/category/health-and-medical/" rel="tag">Health &amp; Medical</a></p>
+								</div>
+							</div>
+							
+														<div class="post-thumbnail header">
+								<img post-id="118437" fifu-featured="1" src="https://i1.wp.com/austincountynewsonline.com/wp-content/uploads/2026/07/Tamu-dementia.png?w=1280&amp;resize=1280,640&amp;ssl=1" alt="Texas A&amp;M Develops AI Tool for Autism, Dementia Care" title="Texas A&amp;M Develops AI Tool for Autism, Dementia Care">							</div>
+							
+														
+							<div class="post-wrap">
+															<div class="post-content entry-content">
+									<div id="instaread-demo-player-wrap">
+<style>
+  #instaread-demo-player-wrap { margin:20px 0 26px; width:100%;
+    min-width:min(520px, 92vw); max-width:100%; clear:both; flex:1 1 100%; }
+  #instaread-demo-player-wrap .instaread-player { background:#ffffff; border:1px solid #ececec;
+    border-radius:14px; box-shadow:0 2px 10px rgba(0,0,0,.08); padding:18px 20px 12px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    text-align:left; color:#1b1b1b; line-height:1.4; box-sizing:border-box; }
+  #instaread-demo-player-wrap * { box-sizing:border-box; margin:0; padding:0; }
+  #instaread-demo-player-wrap .irp-top { display:flex; justify-content:space-between;
+    align-items:baseline; gap:16px; margin:0 0 10px; }
+  #instaread-demo-player-wrap .irp-label { font-size:15px; font-weight:700; color:#1b1b1b; }
+  #instaread-demo-player-wrap .irp-sponsor-tag { font-size:11.5px; color:#9a9a9a; white-space:nowrap; }
+  #instaread-demo-player-wrap .irp-mid { display:flex; align-items:center; gap:14px; }
+  #instaread-demo-player-wrap .irp-btn { flex:0 0 46px; width:46px; height:46px;
+    border-radius:50%; border:none; background:#00a8ff; cursor:pointer; display:flex;
+    align-items:center; justify-content:center; transition:transform .12s ease; }
+  #instaread-demo-player-wrap .irp-btn:hover { transform:scale(1.06); }
+  #instaread-demo-player-wrap .irp-btn svg { width:18px; height:18px; fill:#fff; display:block; }
+  #instaread-demo-player-wrap .irp-wave { flex:1 1 auto; height:44px; display:flex;
+    align-items:center; gap:1.5px; cursor:pointer; min-width:0; }
+  #instaread-demo-player-wrap .irp-wave span { flex:1 1 auto; min-width:1px;
+    background:#d6d6d6; border-radius:1px; transition:background .15s linear; }
+  #instaread-demo-player-wrap .irp-wave span.played { background:#3d3d3d; }
+  #instaread-demo-player-wrap .irp-ad { flex:0 1 190px; min-width:110px; }
+  #instaread-demo-player-wrap .irp-ad img { display:block; width:100%; max-width:190px;
+    height:auto; border-radius:4px; }
+  #instaread-demo-player-wrap .irp-bottom { display:flex; justify-content:flex-end;
+    align-items:center; gap:6px; margin-top:8px; }
+  #instaread-demo-player-wrap .irp-time { font-size:11.5px; color:#a5a5a5;
+    margin-right:auto; font-variant-numeric:tabular-nums; }
+  #instaread-demo-player-wrap .irp-brand { display:flex; align-items:center; gap:4px;
+    font-size:10.5px; font-weight:600; color:#6a6a6a; }
+  #instaread-demo-player-wrap .irp-brand svg { width:8px; height:13px; }
+</style>
+<div class="instaread-player">
+  <div class="irp-top">
+    <div class="irp-label">Listen to audio version of this article</div>
+    <div class="irp-sponsor-tag">Sponsored by</div>
+  </div>
+  <div class="irp-mid">
+    <button class="irp-btn" id="irp-btn" aria-label="Play">
+      <svg id="irp-icon-play" viewBox="0 0 24 24" style="margin-left:2px"><path d="M8 5v14l11-7z"></path></svg>
+      <svg id="irp-icon-pause" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"></path></svg>
+    </button>
+    <div class="irp-wave" id="irp-wave"><span style="height:38%"></span><span style="height:24%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:34%"></span><span style="height:53%"></span><span style="height:50%"></span><span style="height:33%"></span><span style="height:56%"></span><span style="height:66%"></span><span style="height:64%"></span><span style="height:57%"></span><span style="height:80%"></span><span style="height:56%"></span><span style="height:68%"></span><span style="height:47%"></span><span style="height:23%"></span><span style="height:26%"></span><span style="height:45%"></span><span style="height:54%"></span><span style="height:39%"></span><span style="height:19%"></span><span style="height:14%"></span><span style="height:24%"></span><span style="height:14%"></span><span style="height:19%"></span><span style="height:31%"></span><span style="height:31%"></span><span style="height:57%"></span><span style="height:41%"></span><span style="height:36%"></span><span style="height:61%"></span><span style="height:78%"></span><span style="height:82%"></span><span style="height:100%"></span><span style="height:83%"></span><span style="height:68%"></span><span style="height:96%"></span><span style="height:82%"></span><span style="height:100%"></span><span style="height:97%"></span><span style="height:71%"></span><span style="height:48%"></span><span style="height:70%"></span><span style="height:71%"></span><span style="height:84%"></span><span style="height:67%"></span><span style="height:56%"></span><span style="height:42%"></span><span style="height:62%"></span><span style="height:75%"></span><span style="height:79%"></span><span style="height:76%"></span><span style="height:94%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:100%"></span><span style="height:73%"></span><span style="height:78%"></span><span style="height:51%"></span><span style="height:27%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:20%"></span><span style="height:14%"></span><span style="height:14%"></span><span style="height:26%"></span><span style="height:50%"></span><span style="height:40%"></span><span style="height:19%"></span><span style="height:17%"></span><span style="height:24%"></span><span style="height:20%"></span><span style="height:14%"></span><span style="height:27%"></span><span style="height:48%"></span><span style="height:48%"></span><span style="height:50%"></span><span style="height:45%"></span><span style="height:22%"></span><span style="height:48%"></span><span style="height:44%"></span><span style="height:65%"></span><span style="height:77%"></span><span style="height:91%"></span><span style="height:100%"></span><span style="height:85%"></span></div>
+    <div class="irp-ad"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODAiIGhlaWdodD0iMTA0IiB2aWV3Qm94PSIwIDAgMzgwIDEwNCI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPgo8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMxNTE2MWQiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyYTU3NmYiLz4KPC9saW5lYXJHcmFkaWVudD48L2RlZnM+CjxyZWN0IHdpZHRoPSIzODAiIGhlaWdodD0iMTA0IiByeD0iOCIgZmlsbD0idXJsKCNnKSIvPgo8dGV4dCB4PSIyNCIgeT0iNDciIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjkwMCIKIGZpbGw9IiNmZmZmZmYiIGxldHRlci1zcGFjaW5nPSIxIj5OT1ZBKzwvdGV4dD4KPHRleHQgeD0iMjQiIHk9Ijc2IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiNjZmQzZTAiPgpOZXcgc2Vhc29uIMK3IFN0cmVhbSBub3c8L3RleHQ+CjxjaXJjbGUgY3g9IjMzMCIgY3k9IjUyIiByPSIyNiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC45MiIvPgo8cGF0aCBkPSJNMzIyIDM4IEwzNDYgNTIgTDMyMiA2NiBaIiBmaWxsPSIjMTUxNjFkIi8+CjxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSIzMCIgaGVpZ2h0PSIxNiIgcng9IjMiIGZpbGw9IiMwMDAiIG9wYWNpdHk9IjAuMzUiLz4KPHRleHQgeD0iMjEiIHk9IjE4IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiNmZmYiCiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BRDwvdGV4dD4KPC9zdmc+" alt="Advertisement"></div>
+  </div>
+  <div class="irp-bottom">
+    <div class="irp-time"><span id="irp-cur">0:00</span> / 2:46</div>
+    <div class="irp-brand">
+      <svg viewBox="0 0 15 26" fill="none">
+        <path fill="#3a3a3a" d="M0.5 0 H14.5 V16.8 A4.2 4.2 0 0 1 10.3 21 H4.7 A4.2 4.2 0 0 1 0.5 16.8 Z"></path>
+        <rect x="1.7" y="1.9" width="11.6" height="1.5" fill="#ffffff"></rect>
+        <rect x="1.7" y="4.5" width="11.6" height="1.5" fill="#ffffff"></rect>
+        <circle cx="7.5" cy="9.9" r="2.3" fill="#ffffff"></circle>
+        <rect x="5.7" y="13.2" width="3.6" height="7.8" fill="#ffffff"></rect>
+        <path fill="#3a3a3a" d="M4.9 21 H10.1 V26 L7.5 24.2 L4.9 26 Z"></path>
+      </svg>
+      Instaread
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var DURATION = 166;
+  var btn = document.getElementById('irp-btn');
+  var iconPlay = document.getElementById('irp-icon-play');
+  var iconPause = document.getElementById('irp-icon-pause');
+  var wave = document.getElementById('irp-wave');
+  var cur = document.getElementById('irp-cur');
+  var bars = wave.getElementsByTagName('span');
+  var playing = false, elapsed = 0, timer = null, last = 0;
+
+  function fmt(s) {
+    s = Math.max(0, Math.round(s));
+    return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2);
+  }
+  function render() {
+    var frac = Math.min(1, elapsed / DURATION);
+    var n = Math.round(frac * bars.length);
+    for (var i = 0; i < bars.length; i++) {
+      bars[i].className = i < n ? 'played' : '';
+    }
+    cur.textContent = fmt(elapsed);
+  }
+  function tick() {
+    if (!playing) return;
+    var now = performance.now();
+    elapsed += (now - last) / 1000;
+    last = now;
+    if (elapsed >= DURATION) { elapsed = DURATION; stop(); }
+    render();
+  }
+  function start() {
+    if (elapsed >= DURATION) elapsed = 0;
+    playing = true;
+    iconPlay.style.display = 'none';
+    iconPause.style.display = 'block';
+    btn.setAttribute('aria-label', 'Pause');
+    last = performance.now();
+    timer = setInterval(tick, 100);
+  }
+  function stop() {
+    playing = false;
+    if (timer) { clearInterval(timer); timer = null; }
+    iconPlay.style.display = 'block';
+    iconPause.style.display = 'none';
+    btn.setAttribute('aria-label', 'Play');
+  }
+  btn.addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    playing ? stop() : start();
+  });
+  wave.addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation();
+    var r = wave.getBoundingClientRect();
+    elapsed = DURATION * Math.min(1, Math.max(0, (e.clientX - r.left) / r.width));
+    render();
+    if (!playing) start();
+  });
+  render();
+})();
+</script>
+</div><p data-start="107" data-end="364"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">Researchers at Texas A&amp;M University are helping develop a new artificial intelligence-powered platform designed to improve communication and enhance quality of life for children with autism and older adults living with dementia.</span></p>
+<p data-start="366" data-end="637"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">The project, known as <strong data-start="388" data-end="401">VoiceLove</strong>, is being developed through funding from the Advanced Research Projects Agency for Health (ARPA-H). <a href="https://public-health.tamu.edu/index.html" target="_blank" rel="noopener">Texas A&amp;M University’s School of Public Health</a> is one of three organizations selected to participate in the first phase of development.</span></p>
+<p data-start="639" data-end="1028"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">Unlike traditional approaches that rely on generalized recommendations, the VoiceLove platform is designed to learn the unique communication styles, behaviors and preferences of each individual. By recognizing patterns over time, the system aims to help caregivers, therapists and healthcare providers better understand what a person is trying to communicate—even when words are difficult.</span></p>
+<p style="margin: 0in; font-family: 'Times New Roman'; font-size: 20.0pt;"></p><div class="austi-dc1cf4683fd997a33cadfabe2de952d8" id="austi-dc1cf4683fd997a33cadfabe2de952d8"><div id="austi-939903036" data-austi-trackid="117319" data-austi-trackbid="1" class="austi-target austi-target"><a data-no-instant="1" href="https://austincountynewsonline.com/wp-content/uploads/2026/06/Library-June-Calendar.pdf" rel="noopener" class="a2t-link" aria-label="Gordon Memorial Library"><img src="https://austincountynewsonline.com/wp-content/uploads/2026/06/Gordon-Memorial-Library.png" alt="" srcset="https://austincountynewsonline.com/wp-content/uploads/2026/06/Gordon-Memorial-Library.png 892w, https://austincountynewsonline.com/wp-content/uploads/2026/06/Gordon-Memorial-Library-300x48.png 300w, https://austincountynewsonline.com/wp-content/uploads/2026/06/Gordon-Memorial-Library-768x124.png 768w, https://austincountynewsonline.com/wp-content/uploads/2026/06/Gordon-Memorial-Library-128x21.png 128w, https://austincountynewsonline.com/wp-content/uploads/2026/06/Gordon-Memorial-Library-32x5.png 32w, https://austincountynewsonline.com/wp-content/uploads/2026/06/Gordon-Memorial-Library-600x97.png 600w" sizes="(max-width: 892px) 100vw, 892px" width="892" height="144"></a></div></div><p></p>
+<p data-start="1030" data-end="1425"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">For families of children with autism, the technology could lead to more personalized support plans that strengthen communication skills, encourage greater independence, improve social interactions and build on each child’s individual strengths. Rather than treating autism as a one-size-fits-all condition, the platform is designed to adapt to each child’s unique needs as they grow and develop.</span></p>
+<p data-start="1427" data-end="1823"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">Researchers also see significant promise for people living with dementia. As memory loss and cognitive changes progress, many individuals struggle to express their needs, preferences or discomfort. The AI platform is intended to help caregivers recognize behavioral patterns that may indicate hunger, pain, anxiety, confusion or other unmet needs, allowing for more timely and compassionate care.</span></p>
+<p data-start="1825" data-end="2239"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">The system works by allowing caregivers or therapists to securely record short videos during everyday interactions. The AI analyzes both verbal and nonverbal communication—including speech patterns, facial expressions and behaviors—to identify meaningful trends over time. Caregivers can also record observations and respond to daily prompts, giving the system additional information to refine its recommendations.</span></p>
+<p style="margin: 0in; font-family: 'Times New Roman'; font-size: 20.0pt;"></p><div class="austi-c11b319176b5beb4736a87831a6517cb" id="austi-c11b319176b5beb4736a87831a6517cb"><div id="austi-1712359472" style="margin-left: auto;margin-right: auto;text-align: center;" data-austi-trackid="115944" data-austi-trackbid="1"><img src="https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1.png" alt="" srcset="https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1.png 300w, https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1-150x150.png 150w, https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1-128x128.png 128w, https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1-32x32.png 32w, https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1-90x90.png 90w, https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1-75x75.png 75w, https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1-295x295.png 295w, https://austincountynewsonline.com/wp-content/uploads/2026/03/Bar-F-1-100x100.png 100w" sizes="(max-width: 300px) 100vw, 300px" width="300" height="300" style="display: inline-block;"></div></div><p></p>
+<p data-start="2241" data-end="2575"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">Because the platform continually learns from each person’s daily experiences, its guidance becomes increasingly individualized. Researchers believe this adaptive approach could help caregivers better anticipate needs, reduce frustration for both patients and families, and create more proactive care plans tailored to each individual.</span></p>
+<p data-start="2577" data-end="2894"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">The research team plans to begin a pilot study involving a small group of children with autism and older adults living with dementia once institutional approvals are complete. Participants will use the platform for about one month while researchers evaluate its ease of use, effectiveness and overall user experience.</span></p>
+<p data-start="2896" data-end="3016"><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">Following the pilot program, the team will continue refining the technology before expanding to larger clinical studies.</span></p>
+<p data-start="3018" data-end="3469" data-is-last-node="" data-is-only-node=""><span style="font-size: 14pt; font-family: 'times new roman', times, serif;">Researchers say the long-term goal is to create a first-of-its-kind AI platform that combines artificial intelligence, healthcare, behavioral science and human-centered design to support more personalized care. If successful, the technology could help families, caregivers and healthcare professionals better understand those living with autism or dementia, leading to improved communication, stronger relationships and better overall health outcomes.</span></p>
+<p style="margin: 0in; font-family: 'Times New Roman'; font-size: 20.0pt;"></p><div id="austi-3756875120" data-austi-trackid="88898" data-austi-trackbid="1" class="austi-target austi-target">
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floating Vimeo Video</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      min-height: 400vh; /* Scrollable page */
+    }
+    .content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 720px; /* Larger centered player */
+      margin: 80px auto;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+    .video-placeholder {
+      padding-bottom: 56.25%; /* 16:9 aspect */
+      height: 0;
+    }
+    .video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Isolated floating wrapper – high z-index to avoid hiding */
+    #floating-wrapper {
+      position: fixed !important;
+      bottom: 40px !important;
+      right: 40px !important;
+      z-index: 1000000 !important;
+      width: 320px !important;
+      aspect-ratio: 16 / 9 !important;
+      border-radius: 12px !important;
+      overflow: hidden !important;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5) !important;
+      background: #000;
+      display: none;
+      pointer-events: auto;
+    }
+
+    #floating-wrapper iframe {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    /* Unmute button (visible in both states) */
+    .unmute-btn {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      cursor: pointer;
+      z-index: 1000001;
+    }
+  </style>
+<link rel="preload" as="image" href="https://i1.wp.com/austincountynewsonline.com/wp-content/uploads/2026/07/Tamu-dementia.png?w=1280&amp;resize=1280,640&amp;ssl=1">
+
+
+
+  <div class="content">
+    <!-- Your real page content goes here – video is the only thing above for now -->
+
+    <div class="video-container">
+      <div class="video-placeholder" id="placeholder" style="width: 720px; height: 405px;"></div><div class="video" id="video">
+        <div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"></div>
+        <button class="unmute-btn" id="unmuteBtn">Unmute</button>
+      </div>
+
+      
+    </div>
+
+    <!-- Add your article text, images, etc. below here -->
+  </div>
+
+  <!-- Clean floating container (appended here to avoid theme wrappers) -->
+  <div id="floating-wrapper" style="display: none;"></div>
+
+  
+
+</div><p></p>
+																	</div>
+														</div>
+														<div class="post-footer">
+								<div class="social-icons ed-social-share-icons">
+									<p class="share-title">Share:</p>
+									
+		
+		
+		
+		
+		<a href="https://www.facebook.com/sharer.php?u=https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/&amp;t=Texas%20A%26M%20Develops%20AI%20Tool%20for%20Autism%2C%20Dementia%20Care" class="social-share-link" title="Share &quot;Texas A&amp;M Develops AI Tool for Autism, Dementia Care&quot; via Facebook" data-network-name="facebook" data-share-title="Texas A&amp;M Develops AI Tool for Autism, Dementia Care" data-share-url="https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/">
+				<span class="et-extra-icon et-extra-icon-facebook et-extra-icon-background-hover"></span>
+			</a><a href="https://twitter.com/intent/tweet?text=Texas%20A%26M%20Develops%20AI%20Tool%20for%20Autism%2C%20Dementia%20Care%20https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/" class="social-share-link" title="Share &quot;Texas A&amp;M Develops AI Tool for Autism, Dementia Care&quot; via Twitter" data-network-name="twitter" data-share-title="Texas A&amp;M Develops AI Tool for Autism, Dementia Care" data-share-url="https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/">
+				<span class="et-extra-icon et-extra-icon-twitter et-extra-icon-background-hover"></span>
+			</a><a href="https://www.pinterest.com/pin/create/button/?url=https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/&amp;description=Texas%20A%26M%20Develops%20AI%20Tool%20for%20Autism%2C%20Dementia%20Care&amp;media=https://i1.wp.com/austincountynewsonline.com/wp-content/uploads/2026/07/Tamu-dementia.png?w=150&amp;resize=150,150&amp;ssl=1" class="social-share-link" title="Share &quot;Texas A&amp;M Develops AI Tool for Autism, Dementia Care&quot; via Pinterest" data-network-name="pinterest" data-share-title="Texas A&amp;M Develops AI Tool for Autism, Dementia Care" data-share-url="https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/">
+				<span class="et-extra-icon et-extra-icon-pinterest et-extra-icon-background-hover"></span>
+			</a><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/&amp;title=Texas%20A%26M%20Develops%20AI%20Tool%20for%20Autism%2C%20Dementia%20Care" class="social-share-link" title="Share &quot;Texas A&amp;M Develops AI Tool for Autism, Dementia Care&quot; via LinkedIn" data-network-name="linkedin" data-share-title="Texas A&amp;M Develops AI Tool for Autism, Dementia Care" data-share-url="https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/">
+				<span class="et-extra-icon et-extra-icon-linkedin et-extra-icon-background-hover"></span>
+			</a><a href="#" class="social-share-link" title="Share &quot;Texas A&amp;M Develops AI Tool for Autism, Dementia Care&quot; via Email" data-network-name="basic_email" data-share-title="Texas A&amp;M Develops AI Tool for Autism, Dementia Care" data-share-url="https://austincountynewsonline.com/texas-am-develops-ai-tool-for-autism-dementia-care/">
+				<span class="et-extra-icon et-extra-icon-basic_email et-extra-icon-background-hover"></span>
+			</a>								</div>
+																<style type="text/css" id="rating-stars" style="cursor: pointer;">
+									.post-footer .rating-stars #rated-stars img.star-on,
+									.post-footer .rating-stars #rating-stars img.star-on {
+										background-color: #000000;
+									}
+								<img src="https://austincountynewsonline.com/wp-content/themes/Extra/images/star-full.svg" alt="1" title="bad" class="rating-star rating-star-1 star-off"><img src="https://austincountynewsonline.com/wp-content/themes/Extra/images/star-full.svg" alt="2" title="poor" class="rating-star rating-star-2 star-off"><img src="https://austincountynewsonline.com/wp-content/themes/Extra/images/star-full.svg" alt="3" title="regular" class="rating-star rating-star-3 star-off"><img src="https://austincountynewsonline.com/wp-content/themes/Extra/images/star-full.svg" alt="4" title="good" class="rating-star rating-star-4 star-off"><img src="https://austincountynewsonline.com/wp-content/themes/Extra/images/star-full.svg" alt="5" title="gorgeous" class="rating-star rating-star-5 star-off"><input type="hidden" name="score"></style>
+							</div>
+
+																				</article>
+
+						<nav class="post-nav">
+							<div class="nav-links clearfix">
+								<div class="nav-link nav-link-prev">
+									<a href="https://austincountynewsonline.com/beef-prices-expected-to-stay-high-this-summer/" rel="prev"><span class="button">Previous</span><span class="title">Beef Prices Expected to Stay High This Summer</span></a>								</div>
+								<div class="nav-link nav-link-next">
+									<a href="https://austincountynewsonline.com/hurricane-preparation-isnt-just-for-the-coast/" rel="next"><span class="button">Next</span><span class="title">Hurricane Preparation Isn’t Just for the Coast</span></a>								</div>
+							</div>
+						</nav>
+						
+										
+							</div><!-- /.et_pb_extra_column.et_pb_extra_column_main -->
+
+			<div class="et_pb_extra_column_sidebar">
+	<div id="glt_widget-4" class="et_pb_widget widget_glt_widget"><h4 class="widgettitle">CHANGE LANGUAGE/CAMBIAR IDIOMA</h4><div id="google_language_translator" class="default-language-en"><div class="skiptranslate goog-te-gadget" dir="ltr" style=""><div id=":0.targetLanguage"><select class="goog-te-combo" aria-label="Widget &quot;Sprache übersetzen&quot;"><option value="">Sprache auswählen</option><option value="zh-TW">Chinesisch (traditionell)</option><option value="zh-CN">Chinesisch (vereinfacht)</option><option value="fr">Französisch</option><option value="es">Spanisch</option></select></div>Powered by <span style="white-space:nowrap"><a class="VIpgJd-ZVi9od-l4eHX-hSRGPd" href="https://translate.google.com" target="_blank"><img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png" width="37px" height="14px" style="padding-right: 3px" alt="Google Google Übersetzer">Google Übersetzer</a></span></div></div></div> <!-- end .et_pb_widget --><div class="et_pb_widget austi-widget"><h4 class="widgettitle"> </h4><div class="austi-27b6da3bcafc2d0748152e2c9c6daeb2" id="austi-27b6da3bcafc2d0748152e2c9c6daeb2"><div id="austi-1083260048" style="margin-left: auto;margin-right: auto;text-align: center;" data-austi-trackid="58741" data-austi-trackbid="1" class="austi-target austi-target"><a data-no-instant="1" href="https://www.lklinsurance.com/" rel="noopener" class="a2t-link" target="_blank" aria-label="Lynn, Kiecke, Lackey &amp; Eason Ad"><img loading="eager" decoding="async" src="https://austincountynewsonline.com/wp-content/uploads/2017/08/Lynn-Kiecke-Lackey-Eason-Ad.gif" alt="" width="300" height="300" style="display: inline-block;"></a></div></div></div> <!-- end .et_pb_widget --><div class="et_pb_widget austi-widget"><h4 class="widgettitle"> </h4><div class="austi-dffe55255a3566ead70cc6a717aa5e85" id="austi-dffe55255a3566ead70cc6a717aa5e85"><div id="austi-3214818702" style="margin-left: auto;margin-right: auto;text-align: center;" data-austi-trackid="115958" data-austi-trackbid="1" class="austi-target austi-target"><a data-no-instant="1" href="https://www.youtube.com/playlist?list=PLiLsfidc9TCSNoFiz7oFiin4-w1DK3S_a" rel="noopener" class="a2t-link" aria-label="Studio Cookin"><img loading="eager" decoding="async" src="https://austincountynewsonline.com/wp-content/uploads/2026/03/Studio-Cookin.png" alt="" width="300" height="300" style="display: inline-block;"></a></div></div></div> <!-- end .et_pb_widget --><div class="et_pb_widget austi-widget"><h4 class="widgettitle"> </h4><div class="austi-8a939efcf188b8b7ae67cffb09618bff" id="austi-8a939efcf188b8b7ae67cffb09618bff"><div id="austi-3641691417" style="margin-left: auto;margin-right: auto;text-align: center;" data-austi-trackid="90105" data-austi-trackbid="1" class="austi-target austi-target"><a data-no-instant="1" href="https://www.collierconstruction.com/" rel="noopener" class="a2t-link" target="_blank" aria-label="COLLIER AUSTIN CO AD (300 x 300 px)"><img loading="eager" decoding="async" src="https://austincountynewsonline.com/wp-content/uploads/2023/06/COLLIER-AUSTIN-CO-AD-300-x-300-px.png" alt="" width="300" height="300" style="display: inline-block;"></a></div></div></div> <!-- end .et_pb_widget --><div class="et_pb_widget austi-widget"><h4 class="widgettitle"> </h4><div class="austi-caa958eeb83cc5d60c80eb8cacab167d" id="austi-caa958eeb83cc5d60c80eb8cacab167d"><div id="austi-187709440" style="margin-left: auto;margin-right: auto;text-align: center;" data-austi-trackid="116882" data-austi-trackbid="1" class="austi-target austi-target"><a data-no-instant="1" href="https://www.collierconstruction.com/" rel="noopener" class="a2t-link" aria-label="COLLIER AUSTIN CO AD (300 x 300 px)"><img loading="eager" decoding="async" src="https://austincountynewsonline.com/wp-content/uploads/2026/05/COLLIER-AUSTIN-CO-AD-300-x-300-px.png" alt="" width="300" height="300" style="display: inline-block;"></a></div></div></div> <!-- end .et_pb_widget --><div class="et_pb_widget austi-widget"><h4 class="widgettitle"> </h4><div class="austi-f5ab13201bf8387d6eb861289e5de48f" id="austi-f5ab13201bf8387d6eb861289e5de48f"><div id="austi-2858041996" style="margin-left: auto;margin-right: auto;text-align: center;" data-austi-trackid="118183" data-austi-trackbid="1" class="austi-target austi-target"><a data-no-instant="1" href="https://www.csbtx.bank/bellville" rel="noopener" class="a2t-link" target="_blank" aria-label="citizens state bank"><img loading="eager" decoding="async" src="https://austincountynewsonline.com/wp-content/uploads/2026/07/citizens-state-bank.png" alt="" width="300" height="300" style="display: inline-block;"></a></div></div></div> <!-- end .et_pb_widget --><div class="et_pb_widget austi-widget"><h4 class="widgettitle"> </h4><div class="austi-cbe41059936b3900af397cc255dc6449" id="austi-cbe41059936b3900af397cc255dc6449"><div id="austi-1679405834" style="margin-left: auto;margin-right: auto;text-align: center;" data-austi-trackid="58743" data-austi-trackbid="1" class="austi-target austi-target"><a data-no-instant="1" href="https://austincountynewsonline.com/sealyamericanlegionbingo/" rel="noopener" class="a2t-link" target="_blank" aria-label="American Legion Bingo 300 x 300 Ad"><img loading="eager" decoding="async" src="https://austincountynewsonline.com/wp-content/uploads/2022/09/American-Legion-Bingo-300-x-300-Ad.gif" alt="" width="300" height="300" style="display: inline-block;"></a></div></div></div> <!-- end .et_pb_widget --><div class="et_pb_widget austi-widget"><h4 class="widgettitle"> </h4><div class="austi-908a62702669631fb9cbff62da057b89" id="austi-908a62702669631fb9cbff62da057b89"><div id="austi-1957367623" style="margin-left: auto;margin-right: auto;text-align: center;" data-austi-trackid="118089" data-austi-trackbid="1" class="austi-target austi-target"><a data-no-instant="1" href="https://actxgop.com/" rel="noopener" class="a2t-link" aria-label="2026ACRepublicanPartyChamberAd"><img loading="eager" decoding="async" src="https://austincountynewsonline.com/wp-content/uploads/2026/06/2026ACRepublicanPartyChamberAd.jpeg" alt="" width="960" height="960" style="display: inline-block;"></a></div></div></div> <!-- end .et_pb_widget --></div>
+
+		</div> <!-- #content-area -->
+	</div> <!-- .container -->
+	</div> <!-- #main-content -->
+
+	<footer class="et-l et-l--footer">
+			<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_footer">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Get In Touch</p></div>
+			</div><div class="et_pb_module et_pb_blurb et_pb_blurb_0_tb_footer  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon et-animated"></span></span></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description"><p><strong><span style="color: #ffffff;">2217 Peters San Felipe Rd.</span></strong><br><strong><span style="color: #ffffff;">Sealy, TX 77474</span></strong></p></div>
+					</div>
+				</div>
+			</div><div class="et_pb_module et_pb_blurb et_pb_blurb_1_tb_footer  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon et-animated"></span></span></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description"><p><strong><span style="color: #ffffff;">(979)&nbsp; 253-1785</span></strong></p></div>
+					</div>
+				</div>
+			</div><div class="et_pb_module et_pb_blurb et_pb_blurb_2_tb_footer et_pb_text_align_left et_pb_blurb_position_left et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon et-animated"></span></span></div>
+					<div class="et_pb_blurb_container">
+						
+						<div class="et_pb_blurb_description" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;<p><strong><a href=\&quot;mailto:publisher@austincountynewsonline.com\&quot;><span style=\&quot;color: #ffffff;\&quot;>Email Us<\/span><\/a><\/strong><\/p>&quot;,&quot;hover&quot;:&quot;<p><strong><span style=\&quot;color: #3366ff;\&quot;><a href=\&quot;mailto:publisher@austincountynewsonline.com\&quot; style=\&quot;color: #3366ff;\&quot;>Email Us<\/a><\/span><\/strong><\/p>&quot;}},&quot;slug&quot;:&quot;et_pb_blurb&quot;}"><p><strong><a href="mailto:publisher@austincountynewsonline.com"><span style="color: #ffffff;">Email Us</span></a></strong></p></div>
+					</div>
+				</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_0_tb_footer et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div><ul class="et_pb_module et_pb_social_media_follow et_pb_social_media_follow_0_tb_footer clearfix  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<li class="et_pb_social_media_follow_network_0_tb_footer et_pb_social_icon et_pb_social_network_link  et-social-facebook"><a href="https://www.facebook.com/austincountynewsonline" class="icon et_pb_with_border" title="Follow on Facebook" target="_blank"><span class="et_pb_social_media_follow_network_name" aria-hidden="true">Follow</span></a></li><li class="et_pb_social_media_follow_network_1_tb_footer et_pb_social_icon et_pb_social_network_link  et-social-twitter"><a href="https://twitter.com/acnewsonline" class="icon et_pb_with_border" title="Follow on X" target="_blank"><span class="et_pb_social_media_follow_network_name" aria-hidden="true">Follow</span></a></li><li class="et_pb_social_media_follow_network_2_tb_footer et_pb_social_icon et_pb_social_network_link  et-social-instagram"><a href="https://www.instagram.com/acnewsonline/" class="icon et_pb_with_border" title="Follow on Instagram" target="_blank"><span class="et_pb_social_media_follow_network_name" aria-hidden="true">Follow</span></a></li><li class="et_pb_social_media_follow_network_3_tb_footer et_pb_social_icon et_pb_social_network_link  et-social-vimeo"><a href="https://vimeo.com/channels/austincountynewsonline" class="icon et_pb_with_border" title="Follow on Vimeo" target="_blank"><span class="et_pb_social_media_follow_network_name" aria-hidden="true">Follow</span></a></li><li class="et_pb_social_media_follow_network_4_tb_footer et_pb_social_icon et_pb_social_network_link  et-social-pinterest"><a href="https://www.pinterest.com/acnewsonline/" class="icon et_pb_with_border" title="Follow on Pinterest" target="_blank"><span class="et_pb_social_media_follow_network_name" aria-hidden="true">Follow</span></a></li><li class="et_pb_social_media_follow_network_5_tb_footer et_pb_social_icon et_pb_social_network_link  et-social-linkedin"><a href="https://www.linkedin.com/in/austincountynewsonline/" class="icon et_pb_with_border" title="Follow on LinkedIn" target="_blank"><span class="et_pb_social_media_follow_network_name" aria-hidden="true">Follow</span></a></li><li class="et_pb_social_media_follow_network_6_tb_footer et_pb_social_icon et_pb_social_network_link  et-social-rss"><a href="https://feeds.feedburner.com/AustinCountyNewsOnline" class="icon et_pb_with_border" title="Follow on RSS" target="_blank"><span class="et_pb_social_media_follow_network_name" aria-hidden="true">Follow</span></a></li>
+			</ul>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module dnxte_lottie dnxte_lottie_0_tb_footer">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_module_inner">
+					<div>
+                <div class="dnext_lottie_wrapper ">
+                    <div class="dnxte-lottie" data-loop="on" data-path="https://austincountynewsonline.com/wp-content/uploads/2025/06/AUTIN-Country-News-Logo-Animation-Final_03.json" data-autoplay="on" data-speed="1" data-direction="1" data-start-frame="1" data-play-hover="on" data-stop-hover="on" height="400" width="300"></div>
+                </div>
+                <div class="dnxte-lottie-content-setion">
+                    
+                    
+                    <div class="dnxte-lottie-button-container "></div>
+                </div>
+            </div>
+				</div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_1_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;"><span style="color: #ffffff;">© 2014 Austin County News Online, Inc. | Designed by <a href="http://austincountymedia.com/" style="color: #ffffff;">Austin County Media</a>&nbsp;| Hosted by&nbsp;<a href="https://rockfortmedia.com/" style="color: #ffffff;">RockFort Media</a></span></p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_2_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_divider et_pb_divider_1_tb_footer et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_2_tb_footer et_clickable et_pb_text_align_center et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_text_inner" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;<p><span style=\&quot;color: #ffffff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/about\/\&quot; style=\&quot;color: #ffffff;\&quot;>About Us<\/a><\/span><\/p>&quot;,&quot;hover&quot;:&quot;<p><span style=\&quot;color: #3366ff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/about\/\&quot; style=\&quot;color: #3366ff;\&quot;>About Us<\/a><\/span><\/p>&quot;}},&quot;slug&quot;:&quot;et_pb_text&quot;}"><p><span style="color: #ffffff;"><a href="https://austincountynewsonline.com/about/" style="color: #ffffff;">About Us</a></span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_3_tb_footer et_clickable et_pb_text_align_center et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_text_inner" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;<p><span style=\&quot;color: #ffffff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/contact-us\/\&quot; style=\&quot;color: #ffffff;\&quot;>Contact Us<\/a><\/span><\/p>&quot;,&quot;hover&quot;:&quot;<p><span style=\&quot;color: #3366ff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/contact-us\/\&quot; style=\&quot;color: #3366ff;\&quot;>Contact Us<\/a><\/span><\/p>&quot;}},&quot;slug&quot;:&quot;et_pb_text&quot;}"><p><span style="color: #ffffff;"><a href="https://austincountynewsonline.com/contact-us/" style="color: #ffffff;">Contact Us</a></span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_4_tb_footer et_clickable et_pb_text_align_center et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_text_inner" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;<p><span style=\&quot;color: #ffffff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/faq\/\&quot; style=\&quot;color: #ffffff;\&quot;>FAQ<\/a><\/span><\/p>&quot;,&quot;hover&quot;:&quot;<p><span style=\&quot;color: #3366ff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/faq\/\&quot; style=\&quot;color: #3366ff;\&quot;>FAQ<\/a><\/span><\/p>&quot;}},&quot;slug&quot;:&quot;et_pb_text&quot;}"><p><span style="color: #ffffff;"><a href="https://austincountynewsonline.com/faq/" style="color: #ffffff;">FAQ</a></span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_5_tb_footer et_clickable et_pb_text_align_center et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_text_inner" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;<p><span style=\&quot;color: #ffffff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/news-tips\/\&quot; style=\&quot;color: #ffffff;\&quot;>News Tips<\/a><\/span><\/p>&quot;,&quot;hover&quot;:&quot;<p><span style=\&quot;color: #3366ff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/news-tips\/\&quot; style=\&quot;color: #3366ff;\&quot;>News Tips<\/a><\/span><\/p>&quot;}},&quot;slug&quot;:&quot;et_pb_text&quot;}"><p><span style="color: #ffffff;"><a href="https://austincountynewsonline.com/news-tips/" style="color: #ffffff;">News Tips</a></span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_6_tb_footer et_clickable et_pb_text_align_center et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_text_inner" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;<p><span style=\&quot;color: #ffffff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/advertise\/\&quot; style=\&quot;color: #ffffff;\&quot;>Advertising<\/a><\/span><\/p>&quot;,&quot;hover&quot;:&quot;<p><span style=\&quot;color: #3366ff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/advertise\/\&quot; style=\&quot;color: #3366ff;\&quot;>Advert<\/a><a href=\&quot;https:\/\/austincountynewsonline.com\/advertise\/\&quot; style=\&quot;color: #3366ff;\&quot;><\/a><a href=\&quot;https:\/\/austincountynewsonline.com\/advertise\/\&quot; style=\&quot;color: #3366ff;\&quot;>ising<\/a><\/span><\/p>&quot;}},&quot;slug&quot;:&quot;et_pb_text&quot;}"><p><span style="color: #ffffff;"><a href="https://austincountynewsonline.com/advertise/" style="color: #ffffff;">Advertising</a></span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_7_tb_footer et_clickable et_pb_text_align_center et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_text_inner" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;<p><span style=\&quot;color: #ffffff;\&quot;><a href=\&quot;https:\/\/austincountymedia.com\/\&quot; style=\&quot;color: #ffffff;\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener\&quot;>Services<\/a><\/span><\/p>&quot;,&quot;hover&quot;:&quot;<p><span style=\&quot;color: #3366ff;\&quot;><a href=\&quot;https:\/\/austincountymedia.com\/\&quot; style=\&quot;color: #3366ff;\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener\&quot;>Services<\/a><\/span><\/p>&quot;}},&quot;slug&quot;:&quot;et_pb_text&quot;}"><p><span style="color: #ffffff;"><a href="https://austincountymedia.com/" style="color: #ffffff;" target="_blank" rel="noopener">Services</a></span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_8_tb_footer  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Links</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_9_tb_footer et_clickable et_pb_text_align_center et_pb_bg_layout_light et_multi_view__hover_selector">
+				
+				
+				
+				
+				<div class="et_pb_text_inner" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;<p><span style=\&quot;color: #ffffff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/archives\/\&quot; style=\&quot;color: #ffffff;\&quot;>Archives<\/a><\/span><\/p>&quot;,&quot;hover&quot;:&quot;<p><span style=\&quot;color: #3366ff;\&quot;><a href=\&quot;https:\/\/austincountynewsonline.com\/archives\/\&quot; style=\&quot;color: #3366ff;\&quot;>Archives<\/a><\/span><\/p>&quot;}},&quot;slug&quot;:&quot;et_pb_text&quot;}"><p><span style="color: #ffffff;"><a href="https://austincountynewsonline.com/archives/" style="color: #ffffff;">Archives</a></span></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</footer>
+	
+			
+		</div>
+		    </div> <!-- #page-container -->
+
+
+			
+<div id="glt-translate-trigger"><span class="notranslate">Translate »</span></div><div id="glt-toolbar"></div><div id="glt-footer"></div>		
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+<div class="ad_unit ad-unit text-ad text_ad pub_300x250" style="width: 1px !important; height: 1px !important; position: absolute !important; left: 0px !important; top: 0px !important; overflow: hidden !important;">&nbsp;</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id="et-builder-module-design-tb-77400-118437-cached-inline-styles">.et_pb_section_0_tb_footer{padding-top:2px;padding-bottom:2px}.et_pb_section_0_tb_footer.et_pb_section,.et_pb_social_media_follow_network_1_tb_footer a.icon{background-color:#000000!important}.et_pb_row_0_tb_footer.et_pb_row{padding-right:5%!important;padding-bottom:8px!important;padding-left:5%!important;padding-right:5%;padding-bottom:8px;padding-left:5%}.et_pb_row_0_tb_footer,.page .et_pb_row_0_tb_footer.et_pb_row,.single .et_pb_row_0_tb_footer.et_pb_row,.dnxte_lottie_0_tb_footer .dnxte-lottie{width:100%}.et_pb_row_0_tb_footer{max-width:100%}.et_pb_text_0_tb_footer.et_pb_text,.et_pb_text_8_tb_footer.et_pb_text{color:#ffffff!important}.et_pb_text_0_tb_footer,.et_pb_text_8_tb_footer{font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif;font-weight:700;font-size:17px;margin-top:10px!important;margin-bottom:30px!important}.et_pb_blurb_0_tb_footer.et_pb_blurb{padding-left:250px!important;margin-bottom:1px!important}.et_pb_blurb_0_tb_footer .et-pb-icon{font-size:29px;color:#00a8ff;font-family:FontAwesome!important;font-weight:900!important}.et_pb_blurb_1_tb_footer.et_pb_blurb{padding-top:42px!important;padding-left:247px!important;margin-bottom:2px!important}.et_pb_blurb_1_tb_footer .et-pb-icon,.et_pb_blurb_2_tb_footer .et-pb-icon{font-size:29px;color:#00a8ff;font-family:ETmodules!important;font-weight:400!important}.et_pb_blurb_2_tb_footer.et_pb_blurb{padding-left:249px!important;margin-top:48px!important}.et_pb_divider_0_tb_footer,.et_pb_divider_1_tb_footer{padding-bottom:0px;margin-bottom:4px!important}.et_pb_divider_0_tb_footer:before,.et_pb_divider_1_tb_footer:before{border-top-color:#FFFFFF;border-top-width:3px;width:auto;top:0px;right:0px;left:0px}ul.et_pb_social_media_follow_0_tb_footer{padding-top:6px!important;margin-bottom:1px!important}.dnxte_lottie_0_tb_footer{padding-bottom:0px;width:55%}.et_pb_text_1_tb_footer{font-weight:600;font-size:19px;min-height:18.6px;margin-top:-35px!important}.et_pb_text_2_tb_footer.et_pb_text,.et_pb_text_3_tb_footer.et_pb_text,.et_pb_text_4_tb_footer.et_pb_text,.et_pb_text_5_tb_footer.et_pb_text,.et_pb_text_7_tb_footer.et_pb_text{color:#FFFFFF!important;transition:color 300ms ease 0ms}.et_pb_text_2_tb_footer.et_pb_text:hover,.et_pb_text_3_tb_footer.et_pb_text:hover,.et_pb_text_4_tb_footer.et_pb_text:hover,.et_pb_text_5_tb_footer.et_pb_text:hover,.et_pb_text_6_tb_footer.et_pb_text:hover,.et_pb_text_7_tb_footer.et_pb_text:hover,.et_pb_text_9_tb_footer.et_pb_text:hover{color:#0000ee!important}.et_pb_text_2_tb_footer,.et_pb_text_3_tb_footer,.et_pb_text_4_tb_footer,.et_pb_text_5_tb_footer,.et_pb_text_6_tb_footer,.et_pb_text_7_tb_footer{font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif;font-weight:600;font-size:15px;margin-top:10px!important;margin-bottom:10px!important}.et_pb_text_6_tb_footer.et_pb_text,.et_pb_text_9_tb_footer.et_pb_text{color:#0000ee!important;transition:color 300ms ease 0ms}.et_pb_text_9_tb_footer{font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif;font-weight:500;font-size:16px;margin-top:10px!important;margin-bottom:10px!important}.et_pb_social_media_follow_network_0_tb_footer a.icon{background-color:#3b5998!important}.et_pb_social_media_follow_network_2_tb_footer a.icon{background-color:#ea2c59!important}.et_pb_social_media_follow_network_3_tb_footer a.icon{background-color:#45bbff!important}.et_pb_social_media_follow_network_4_tb_footer a.icon{background-color:#cb2027!important}.et_pb_social_media_follow_network_5_tb_footer a.icon{background-color:#007bb6!important}.et_pb_social_media_follow_network_6_tb_footer a.icon{background-color:#ff8a3c!important}.dnxte_lottie_0_tb_footer.et_pb_module{margin-left:auto!important;margin-right:auto!important}@media only screen and (max-width:980px){.et_pb_text_0_tb_footer{margin-top:10px!important;margin-bottom:30px!important}ul.et_pb_social_media_follow_0_tb_footer{padding-top:67px!important}.dnxte_lottie_0_tb_footer .dnxte-lottie{width:}}@media only screen and (max-width:767px){.et_pb_text_0_tb_footer{margin-top:58px!important;margin-bottom:30px!important}ul.et_pb_social_media_follow_0_tb_footer{padding-top:0px!important}.dnxte_lottie_0_tb_footer .dnxte-lottie{width:}.et_pb_text_6_tb_footer{padding-bottom:0px!important}}</style>			
+				
+	
+
+
+<div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="display: none; border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class="VIpgJd-yAWNEb-hvhgNd-Ud7fr"><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""><div class=" VIpgJd-yAWNEb-hvhgNd-IuizWc-i3jM8c " dir="ltr">Originaltext</div></div><div class="VIpgJd-yAWNEb-hvhgNd-k77Iif"><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid ltr"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od ltr" dir="ltr"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">Diese Übersetzung bewerten</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">Mit deinem Feedback können wir Google Übersetzer weiter verbessern</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 ltr"><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Gute Übersetzung" aria-label="Gute Übersetzung" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="Schlechte Übersetzung" aria-label="Schlechte Übersetzung" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form></div></div></div><div class="tool-container tool-top toolbar-primary" style="opacity: 0; display: none;"><div class="tool-items"></div><div class="arrow"></div></div><div class="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"><div class="VIpgJd-ZVi9od-aZ2wEe-OiiCO"><svg xmlns="http://www.w3.org/2000/svg" class="VIpgJd-ZVi9od-aZ2wEe" width="96px" height="96px" viewBox="0 0 66 66"><circle class="VIpgJd-ZVi9od-aZ2wEe-Jt5cK" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div><style>
+  .ir-demo-disclaimer { position:fixed; bottom:0; left:0; right:0; z-index:2147483647;
+    background:#ffd60a; border-top:3px solid #b8960c; color:#1a1400;
+    font:800 13.5px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    text-align:center; padding:11px 18px; letter-spacing:.015em;
+    box-shadow:0 -2px 12px rgba(0,0,0,.18); }
+  .ir-demo-ribbon { position:fixed; top:50%; right:0; z-index:2147483647;
+    transform:translateY(-50%) rotate(180deg); writing-mode:vertical-rl;
+    background:#ffd60a; border:3px solid #b8960c; border-right:none; color:#1a1400;
+    font:800 12.5px/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    letter-spacing:.06em; padding:16px 9px; border-radius:0 8px 8px 0;
+    box-shadow:2px 0 12px rgba(0,0,0,.18); white-space:nowrap; }
+</style>
+<div class="ir-demo-disclaimer">⚠ DEMO ONLY — This page is a design mock-up created
+solely for demo purposes. Not affiliated with, endorsed by, or connected to any real
+service, publication, or person.</div>
+<div class="ir-demo-ribbon">⚠ DEMO — NOT A REAL PUBLICATION</div>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest ? e.target.closest('a') : null;
+  if (a && !a.closest('#instaread-demo-player-wrap')) e.preventDefault();
+}, true);
+</script></body><style data-ir-clean="1">
+#onetrust-consent-sdk, #onetrust-banner-sdk, .onetrust-pc-dark-filter,
+.qc-cmp2-container, #qc-cmp2-container, [id^="sp_message_container"],
+.fc-consent-root, #usercentrics-root, #didomi-host, #cmpbox, #cmpbox2,
+#CybotCookiebotDialog, .truste_overlay, .truste_box_overlay, #cookie-notice,
+.cky-consent-container, #cookiescript_injected, .osano-cm-window,
+.pum, .pum-overlay, [class*="popmake"], .mfp-bg, .mfp-wrap, .modal-backdrop,
+.fancybox-overlay, [id^="om-"], .sgpb-popup-overlay, .elementor-popup-modal,
+.tve_p_lb_overlay, .mc-modal, .mc-modal-bg
+{ display: none !important; }
+</style></html>
